@@ -1,0 +1,80 @@
+<section class='promo'>
+  <picture>
+    <source srcset='img/shop/promo_bg.webp' type='image/webp' />
+    <img src='img/shop/promo_bg.jpg' alt='promo background' class='promo__bg' />
+  </picture>
+  <h1 class='title title_big promo__title'>
+    Cart
+  </h1>
+</section>
+<section class='products'>
+  <div class='container'>
+    {{#if products}}
+      <div class='products-container products__items'>
+        {{#each products}}
+          <a href='/cart/{{_id}}' class='product'>
+            <div class='product__count'>
+              x{{count}}
+            </div>
+            <div class='product__tag'>
+              {{category}}
+            </div>
+            <picture>
+              <img src='{{imgName}}' alt='product' class='product__img' />
+            </picture>
+            <div class='product__info'>
+              <div class='product__title'>
+                {{title}}
+              </div>
+              <div class='product__divider'></div>
+              <div class='product__footer'>
+                <div class='product__old-price'>
+                  ${{oldPrice}}
+                </div>
+                <div class='product__price'>
+                  ${{price}}
+                </div>
+                <div class='product__rating'>
+                  {{#times rating}}
+                    <img
+                      src='icons/star.svg'
+                      alt='star'
+                      class='product__rating-star'
+                    />
+                  {{/times}}
+                </div>
+              </div>
+            </div>
+          </a>
+        {{/each}}
+      </div>
+
+      <form method='post' class='cart__form'>
+        <button class='btn btn_centered cart__btn'>
+          <span>
+            Place order
+          </span>
+          <div class='btn__round'>
+            <img
+              src='/icons/arrow_right.svg'
+              alt='arrow right'
+              class='btn__icon'
+            />
+          </div>
+        </button>
+      </form>
+    {{else}}
+      {{#if orderPlaced}}
+        <div class='title title_25px title_centered'>
+          Your order has been placed! Thank you for your order!
+        </div>
+      {{else}}
+        <div class='title title_25px title_centered'>
+          Your cart is empty!
+        </div>
+      {{/if}}
+    {{/if}}
+  </div>
+</section>
+
+{{> subscribe}}

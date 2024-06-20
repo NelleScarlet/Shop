@@ -1,0 +1,72 @@
+<section class='promo'>
+  <picture>
+    <source srcset='/img/team/promo_bg.webp' type='image/webp' />
+    <img
+      src='/img/team/promo_bg.jpg'
+      alt='promo background'
+      class='promo__bg'
+    />
+  </picture>
+  <h1 class='title title_big promo__title'>
+    Our Team
+  </h1>
+</section>
+<section class='members'>
+  <div class='container'>
+    <div class='subtitle subtitle_centered'>
+      Team
+    </div>
+    <h2 class='title title_centered members__title'>
+      Our Organic Experts
+    </h2>
+    <div class='members__descr'>
+      At Organic, we're proud to have a team of experts who are passionate about healthy living and sustainable agriculture. From accredited farmers to nutritionists, our team is dedicated to ensuring that every product we offer meets our rigorous standards for quality, freshness, and sustainability.
+    </div>
+    <div class='members__items'>
+      {{#each teammates}}
+        <div class='members__item'>
+          <picture>
+            <img src='{{photoName}}' alt='photo' class='members__item-photo' />
+          </picture>
+          <div class='title title_25px members__item-name'>
+            {{name}}
+          </div>
+          <div class='members__item-occupation'>
+            {{occupation}}
+          </div>
+          <div class='members__item-social'>
+            {{#if instagramLink}}
+              <a href='{{instagramLink}}' class='members__item-social-link'>
+                <img
+                  src='/icons/social/instagram.svg'
+                  alt='instagram icon'
+                  class='members__item-social-link-icon'
+                />
+              </a>
+            {{/if}}
+            {{#if facebookLink}}
+              <a href='{{facebookLink}}' class='members__item-social-link'>
+                <img
+                  src='/icons/social/facebook.svg'
+                  alt='facebook icon'
+                  class='members__item-social-link-icon'
+                />
+              </a>
+            {{/if}}
+            {{#if twitterLink}}
+              <a href='{{twitterLink}}' class='members__item-social-link'>
+                <img
+                  src='/icons/social/twitter.svg'
+                  alt='twitter icon'
+                  class='members__item-social-link-icon'
+                />
+              </a>
+            {{/if}}
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+{{> subscribe}}

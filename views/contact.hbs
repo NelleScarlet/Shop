@@ -1,0 +1,226 @@
+<section class='promo'>
+  <picture>
+    <source srcset='/img/contact/promo_bg.webp' type='image/webp' />
+    <img
+      src='/img/contact/promo_bg.jpg'
+      alt='promo background'
+      class='promo__bg'
+    />
+  </picture>
+  <h1 class='title title_big promo__title'>
+    Contact Us
+  </h1>
+</section>
+<section class='means'>
+  <div class='container'>
+    <div class='means__wrapper'>
+      <picture>
+        <source srcset='/img/contact/means_img.webp' type='image/webp' />
+        <img src='/img/contact/means_img.jpg' alt='fruits' class='means__img' />
+      </picture>
+      <div class='means__content'>
+        <h2 class='title means__title'>
+          We'd love to talk about how we can work together.
+        </h2>
+        <div class='means__descr'>
+          Our team is always available to answer any questions you may have and help you with your inquiries. Contact us today to see how we can work together towards a healthier future!
+        </div>
+        <div class='means__items'>
+          <div class='means__item'>
+            <div class='means__item-img-container'>
+              <img
+                src='/icons/contact/letter.svg'
+                alt='letter'
+                class='means__item-img'
+              />
+            </div>
+            <div class='means__item-info'>
+              <div class='title title_25px means__item-title'>
+                Message
+              </div>
+              <a href='mailto:support@organic.com' class='means__item-mean'>
+                support@organic.com
+              </a>
+            </div>
+          </div>
+          <div class='means__item'>
+            <div class='means__item-img-container'>
+              <img
+                src='/icons/contact/phone.svg'
+                alt='phone'
+                class='means__item-img'
+              />
+            </div>
+            <div class='means__item-info'>
+              <div class='title title_25px means__item-title'>
+                Call
+              </div>
+              <a href='tel:01123456789' class='means__item-mean'>
+                +01 123 456 789
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class='means__social'>
+          <a href='#' class='means__social-link'>
+            <img
+              src='/icons/social/instagram.svg'
+              alt='instagram icon'
+              class='means__social-icon'
+            />
+          </a>
+          <a href='#' class='means__social-link'>
+            <img
+              src='/icons/social/facebook.svg'
+              alt='facebook icon'
+              class='means__social-icon'
+            />
+          </a>
+          <a href='#' class='means__social-link'>
+            <img
+              src='/icons/social/twitter.svg'
+              alt='twitter icon'
+              class='means__social-icon'
+            />
+          </a>
+          <a href='#' class='means__social-link'>
+            <img
+              src='/icons/social/pinterest.svg'
+              alt='pinterest icon'
+              class='means__social-icon'
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class='location'>
+  <div class='container'>
+    <picture>
+      <source srcset='/img/contact/location_img.webp' type='image/webp' />
+      <img
+        src='/img/contact/location_img.jpg'
+        alt='leave'
+        class='location__img'
+      />
+    </picture>
+    <div class='location__content'>
+      <div class='subtitle location__subtitle'>
+        Location
+      </div>
+      <h2 class='title location__title'>
+        Our Farms
+      </h2>
+      <div class='location__descr'>
+        We have farms located all over the country to ensure the freshest and highest quality produce. Check out our map to see where your food comes from!
+      </div>
+      <div class='location__items'>
+        <div class='location__item'>
+          <picture>
+            <source srcset='/icons/contact/map_mark.webp' type='image/webp' />
+            <img
+              src='/icons/contact/map_mark.png'
+              alt='map mark'
+              class='location__item-icon'
+            />
+          </picture>
+          <div class='location__item-title'>
+            New York, USA:
+          </div>
+          <div class='location__item-address'>
+            299 Park Avenue New York, New York 10171
+          </div>
+        </div>
+        <div class='location__item'>
+          <picture>
+            <source srcset='/icons/contact/map_mark.webp' type='image/webp' />
+            <img
+              src='/icons/contact/map_mark.png'
+              alt='map mark'
+              class='location__item-icon'
+            />
+          </picture>
+          <div class='location__item-title'>
+            London, UK:
+          </div>
+          <div class='location__item-address'>
+            30 Stamford Street, London SE1 9LQ
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class='message'>
+  {{#if messageSent}}
+    <div
+      class='title title_25px title_centered'
+      style='margin-bottom:70px;color:#7eb693'
+    >
+      Your message is sent! Thank you!
+    </div>
+  {{/if}}
+  <form method='post' class='message__form'>
+    <label class='message__label'>
+      Full Name*
+      <input
+        name='name'
+        required
+        placeholder='Your Name'
+        type='text'
+        class='message__input'
+      />
+    </label>
+
+    <label class='message__label'>
+      Your Email*
+      <input
+        name='email'
+        required
+        placeholder='Your Email'
+        type='email'
+        class='message__input'
+      />
+    </label>
+
+    <label class='message__label'>
+      Company*
+      <input
+        name='company'
+        required
+        placeholder='Your Company Name'
+        type='text'
+        class='message__input'
+      />
+    </label>
+
+    <label class='message__label'>
+      Subject*
+      <input
+        name='subject'
+        required
+        placeholder='Your Subject'
+        type='text'
+        class='message__input'
+      />
+    </label>
+
+    <label class='message__label'>
+      Message*
+      <textarea
+        name='message'
+        id='message'
+        required
+        placeholder='Hello there, I would like to talk about how to...'
+        class='message__textarea'
+      ></textarea>
+    </label>
+
+    <button class='message__submit'>
+      Send Message
+    </button>
+  </form>
+</section>
+
+{{> subscribe}}

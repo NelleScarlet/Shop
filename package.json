@@ -1,0 +1,25 @@
+{
+  "name": "organic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "author": "Olena Trofymenko",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "express-session": "^1.17.3",
+    "mongoose": "^7.1.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.39.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.8"
+  }
+}

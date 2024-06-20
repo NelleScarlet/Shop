@@ -1,0 +1,52 @@
+<section class='promo'>
+  <picture>
+    <img
+      src='{{farm/promoImageName}}'
+      alt='promo background'
+      class='promo__bg'
+    />
+  </picture>
+  <div class='promo__wrapper'>
+    <div class='promo__overview'>
+      <h1 class='title title_big promo__title'>
+        {{farm/name}}
+      </h1>
+      <div class='promo__descr'>
+        {{farm/description}}
+      </div>
+    </div>
+    <div class='promo__info'>
+      <div class='promo__info-category'>
+        Date
+      </div>
+      <div class='promo__info-value'>
+        {{farm/month}} {{farm/day}}, {{farm/year}}
+      </div>
+      <div class='promo__info-category'>
+        Client
+      </div>
+      <div class='promo__info-value'>
+        {{farm/clientName}}
+      </div>
+      <div class='promo__info-category'>
+        Category
+      </div>
+      <div class='promo__info-value'>
+        {{farm/category}}
+      </div>
+      <div class='promo__info-category'>
+        Service
+      </div>
+      <div class='promo__info-value'>
+        {{farm/service}}
+      </div>
+    </div>
+  </div>
+</section>
+<section class='about'>
+  <div class='about__container'>
+    {{{farm/content}}}
+  </div>
+</section>
+
+{{> subscribe}}

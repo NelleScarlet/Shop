@@ -1,0 +1,531 @@
+<main>
+  <section class='promo'>
+    <div class='container'>
+      <h2 class='subtitle'>
+        100% Natural Food
+      </h2>
+      <h1 class='title title_big promo__title'>
+        Choose the best
+        <br />
+        healthier way
+        <br />
+        of life
+      </h1>
+      <a href='#about-us' class='btn btn_yellow promo__btn'>
+        <span>
+          Explore Now
+        </span>
+        <div class='btn__round'>
+          <img
+            src='/icons/arrow_right.svg'
+            alt='arrow right'
+            class='btn__icon'
+          />
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class='banners'>
+    <div class='container'>
+      <div class='banners__items'>
+        <div href='#' class='banners__item'>
+          <div class='banners__item-info'>
+            <div class='subtitle subtitle_white'>
+              Natural!!
+            </div>
+            <div class='title title_40px title_white banners__item-title'>
+              Get Garden Fresh Fruits
+            </div>
+          </div>
+          <picture>
+            <source
+              srcset='img/homepage/natural-offer1.webp'
+              type='image/webp'
+            />
+            <img
+              src='img/homepage/natural-offer1.jpg'
+              alt='background'
+              class='banners__item-bg'
+            />
+          </picture>
+        </div>
+        <div href='#' class='banners__item'>
+          <div class='banners__item-info'>
+            <div class='subtitle'>
+              Offer!!
+            </div>
+            <div class='title title_40px banners__item-title'>
+              Get 10% off on Vegetables
+            </div>
+          </div>
+          <picture>
+            <source
+              srcset='img/homepage/natural-offer2.webp'
+              type='image/webp'
+            />
+            <img
+              src='img/homepage/natural-offer2.jpg'
+              alt='background'
+              class='banners__item-bg'
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id='about-us' class='about-us'>
+    <div class='container'>
+      <picture>
+        <source srcset='img/homepage/about-us-img.webp' type='image/webp' />
+        <img
+          src='img/homepage/about-us-img.png'
+          alt='citruses'
+          class='about-us__img'
+        />
+      </picture>
+      <div class='about-us__content'>
+        <div class='subtitle'>
+          About Us
+        </div>
+        <h2 class='title'>
+          We Believe in Working Accredited Farmers
+        </h2>
+        <div class='about-us__content-text'>
+          At Organic, we're committed to providing our customers with the freshest and healthiest food possible. That's why we believe in working with accredited farmers who share our values of sustainability and ethical farming practices. By partnering with these farmers, we're able to source the highest quality ingredients for our products, while also supporting local communities and reducing our environmental impact.
+        </div>
+        <div class='about-us__content-items'>
+          <div class='about-us__content-item'>
+            <div class='about-us__content-item-rounded-square'>
+              <img
+                src='/icons/homepage/about_us/about_us1.svg'
+                alt='icon'
+                class='about-us__content-item-icon'
+              />
+            </div>
+            <div class='title title_25px about-us__content-item-title'>
+              Organic Foods Only
+            </div>
+            <div class='about-us__content-item-text'>
+              Our commitment to using only organic ingredients ensures that every product we offer is healthy, sustainable, and delicious.
+            </div>
+          </div>
+          <div class='about-us__content-item'>
+            <div class='about-us__content-item-rounded-square'>
+              <img
+                src='/icons/homepage/about_us/about_us2.svg'
+                alt='icon'
+                class='about-us__content-item-icon'
+              />
+            </div>
+            <div class='title title_25px about-us__content-item-title'>
+              Quality Standards
+            </div>
+            <div class='about-us__content-item-text'>
+              We hold ourselves to the highest standards of quality and ensure that every ingredient we use meets our rigorous criteria for freshness, taste, and sustainability.
+            </div>
+          </div>
+        </div>
+        <a href='/about' class='btn about-us__content-btn'>
+          <span>
+            Read More
+          </span>
+          <div class='btn__round'>
+            <img
+              src='/icons/arrow_right.svg'
+              alt='arrow right'
+              class='btn__icon'
+            />
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class='categories'>
+    <div class='container'>
+      <div class='subtitle subtitle_centered'>
+        Categories
+      </div>
+      <h2 class='title title_centered'>
+        Our Products
+      </h2>
+
+      {{#if categoriesProducts.length}}
+        <div class='products-container categories__products'>
+          {{#each categoriesProducts}}
+            <a href='/shop/{{_id}}' class='product'>
+              <div class='product__tag'>
+                {{category}}
+              </div>
+              <picture>
+                <img src='{{imgName}}' alt='product' class='product__img' />
+              </picture>
+              <div class='product__info'>
+                <div class='product__title'>
+                  {{title}}
+                </div>
+                <div class='product__divider'></div>
+                <div class='product__footer'>
+                  <div class='product__old-price'>
+                    ${{oldPrice}}
+                  </div>
+                  <div class='product__price'>
+                    ${{price}}
+                  </div>
+                  <div class='product__rating'>
+                    {{#times rating}}
+                      <img
+                        src='/icons/star.svg'
+                        alt='star'
+                        class='product__rating-star'
+                      />
+                    {{/times}}
+                  </div>
+                </div>
+              </div>
+            </a>
+          {{/each}}
+        </div>
+      {{else}}
+        <h3 class='title title_25px title_centered'>
+          No products!
+        </h3>
+      {{/if}}
+      <a href='/shop' class='btn btn_centered categories__btn'>
+        <span>
+          Open Shop
+        </span>
+        <div class='btn__round'>
+          <img
+            src='/icons/arrow_right.svg'
+            alt='arrow right'
+            class='btn__icon'
+          />
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class='testimonial'>
+    <picture>
+      <source
+        srcset='img/homepage/testimonial_bg_part.webp'
+        type='image/webp'
+      />
+      <img
+        src='img/homepage/testimonial_bg_part.png'
+        alt='background part'
+        class='testimonial__bg-left'
+      />
+    </picture>
+    <picture>
+      <source
+        srcset='img/homepage/testimonial_bg_part.webp'
+        type='image/webp'
+      />
+      <img
+        src='img/homepage/testimonial_bg_part.png'
+        alt='background part'
+        class='testimonial__bg-right'
+      />
+    </picture>
+    <div class='container'>
+      <div class='subtitle subtitle_centered'>
+        Testimonial
+      </div>
+      <h2 class='title title_centered testimonial__title'>
+        What Do Our Customers Say?
+      </h2>
+      <div class='testimonial__slider'>
+        {{#if feedbacks.length}}
+          {{#each feedbacks}}
+            <div class='testimonial__slider-slide'>
+              <picture>
+                <img
+                  src='{{avatarName}}'
+                  class='testimonial__slider-slide-avatar'
+                />
+              </picture>
+              <div class='testimonial__slider-slide-rating'>
+                {{#times rating}}
+                  <img
+                    src='/icons/star.svg'
+                    alt='star'
+                    class='testimonial__slider-slide-rating-star'
+                  />
+                {{/times}}
+              </div>
+              <div class='testimonial__slider-slide-feedback'>
+                {{feedbackText}}
+              </div>
+              <div class='testimonial__slider-slide-name'>
+                {{name}}
+              </div>
+              <div class='testimonial__slider-slide-status'>
+                {{status}}
+              </div>
+            </div>
+          {{/each}}
+        {{/if}}
+      </div>
+      <div class='testimonial__divider'></div>
+      <div class='testimonial__achievements'>
+        <div class='testimonial__achievement'>
+          <div class='testimonial__achievement-content'>
+            <div class='testimonial__achievement-record'>
+              100%
+            </div>
+            <div class='testimonial__achievement-descr'>
+              Organic
+            </div>
+          </div>
+        </div>
+        <div class='testimonial__achievement'>
+          <div class='testimonial__achievement-content'>
+            <div class='testimonial__achievement-record'>
+              285
+            </div>
+            <div class='testimonial__achievement-descr'>
+              Active Product
+            </div>
+          </div>
+        </div>
+        <div class='testimonial__achievement'>
+          <div class='testimonial__achievement-content'>
+            <div class='testimonial__achievement-record'>
+              350+
+            </div>
+            <div class='testimonial__achievement-descr'>
+              Organic Orchads
+            </div>
+          </div>
+        </div>
+        <div class='testimonial__achievement'>
+          <div class='testimonial__achievement-content'>
+            <div class='testimonial__achievement-record'>
+              25+
+            </div>
+            <div class='testimonial__achievement-descr'>
+              Years of Farming
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='offers'>
+    <div class='container'>
+      <div class='offers__head'>
+        <div class='subtitle offers__subtitle'>
+          Offer
+        </div>
+        <div class='title title_white offers__title'>
+          We Offer Organic For You
+        </div>
+        <a href='/shop' class='btn btn_yellow offers__btn'>
+          <span>
+            View All Product
+          </span>
+          <div class='btn__round'>
+            <img
+              src='/icons/arrow_right.svg'
+              alt='arrow right'
+              class='btn__icon'
+            />
+          </div>
+        </a>
+      </div>
+        {{#if offersProducts.length}}
+          <div class='products-container offers__products'>
+            {{#each offersProducts}}
+              <a href='/shop/{{_id}}' class='product'>
+                <div class='product__tag'>
+                  {{category}}
+                </div>
+                <picture>
+                  <img src='{{imgName}}' alt='product' class='product__img' />
+                </picture>
+                <div class='product__info'>
+                  <div class='product__title'>
+                    {{title}}
+                  </div>
+                  <div class='product__divider'></div>
+                  <div class='product__footer'>
+                    <div class='product__old-price'>
+                      ${{oldPrice}}
+                    </div>
+                    <div class='product__price'>
+                      ${{price}}
+                    </div>
+                    <div class='product__rating'>
+                      {{#times rating}}
+                        <img
+                          src='/icons/star.svg'
+                          alt='star'
+                          class='product__rating-star'
+                        />
+                      {{/times}}
+                    </div>
+                  </div>
+                </div>
+              </a>
+            {{/each}}
+          </div>
+        {{else}}
+          <h3 class='title title_25px title_centered'>
+            No products!
+          </h3>
+        {{/if}}
+      </div>
+    </div>
+  </section>
+
+  <section class='eco-friendly'>
+    <picture>
+      <source
+        srcset='img/homepage/eco_friendly_bg_part.webp'
+        type='image/webp'
+      />
+      <img
+        src='img/homepage/eco_friendly_bg_part.jpg'
+        alt='background image'
+        class='eco-friendly__bg-img'
+      />
+    </picture>
+    <div class='container'>
+      <div class='eco-friendly__content'>
+        <div class='subtitle'>
+          Eco Friendly
+        </div>
+        <h2 class='title eco-friendly__title'>
+          Organic Store is an Eco-friendly One
+        </h2>
+        <div class='eco-friendly__item'>
+          <div class='title title_25px'>
+            Start with Our Company First
+          </div>
+          <div class='eco-friendly__item-text'>
+            At Organic, we're dedicated to sustainability, using eco-friendly practices in every aspect of our business to reduce our impact on the planet.
+          </div>
+        </div>
+        <div class='eco-friendly__item'>
+          <div class='title title_25px'>
+            Learn How to Grow Yourself
+          </div>
+          <div class='eco-friendly__item-text'>
+            Everyone can play a role in building a more sustainable future, which is why we help you grow your own food and reduce your carbon footprint.
+          </div>
+        </div>
+        <div class='eco-friendly__item'>
+          <div class='title title_25px'>
+            Farming Strategies of Today
+          </div>
+          <div class='eco-friendly__item-text'>
+            We work only with accredited farmers who use innovative and ethical farming strategies to promote healthy ecosystems.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='gallery'>
+    <div class='gallery__item'>
+      <div class='gallery__text'>
+        Organic Juice
+      </div>
+    </div>
+    <div class='gallery__item'>
+      <div class='gallery__text'>
+        Organic Food
+      </div>
+    </div>
+    <div class='gallery__item'>
+      <div class='gallery__text'>
+        Nuts Cookis
+      </div>
+    </div>
+  </section>
+
+  <section class='news'>
+    <div class='container'>
+      <div class='news__head'>
+        <div class='subtitle news__subtitle'>
+          News
+        </div>
+        <h2 class='title news__title'>
+          Discover weekly content about organic food, & more
+        </h2>
+        <a href='/blog' class='btn btn_white news__btn'>
+          <span>
+            More News
+          </span>
+          <div class='btn__round'>
+            <img
+              src='/icons/arrow_right.svg'
+              alt='arrow right'
+              class='btn__icon'
+            />
+          </div>
+        </a>
+      </div>
+      <div class='news-container news__news-container'>
+        {{#if blogArticles.length}}
+          {{#each blogArticles}}
+            <div class='new-item'>
+              <picture>
+                <img
+                  src='{{promoImageNameMini}}'
+                  alt='new background'
+                  class='new-item__bg-img'
+                />
+              </picture>
+              <div class='new-item__date'>
+                <div class='new-item__date-day'>
+                  {{day}}
+                </div>
+                <div class='new-item__date-month'>
+                  {{month}}
+                </div>
+              </div>
+              <div class='new-item__content'>
+                <div class='new-item__author'>
+                  <img
+                    src='/icons/news_author.svg'
+                    alt='author icon'
+                    class='new-item__author-icon'
+                  />
+                  <span>
+                    By {{author}}
+                  </span>
+                </div>
+                <h3 class='title title_25px new-item__title'>
+                  {{title}}
+                </h3>
+                <div class='new-item__text'>
+                  {{description}}
+                </div>
+                <a href='/blog/{{_id}}' class='btn btn_yellow new-item__btn'>
+                  <span>
+                    Read More
+                  </span>
+                  <div class='btn__round'>
+                    <img
+                      src='/icons/arrow_right.svg'
+                      alt='arrow right'
+                      class='btn__icon'
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+          {{/each}}
+        {{/if}}
+      </div>
+    </div>
+  </section>
+
+  {{> subscribe}}
+</main>

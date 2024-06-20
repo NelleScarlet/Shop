@@ -1,0 +1,90 @@
+<header class='header'>
+  <div class='container'>
+    <a href='/' class='header__logo'>
+      <img src='/icons/logo.svg' alt='logo image' class='header__logo-img' />
+      <span class='header__logo-text'>
+        Organic
+      </span>
+    </a>
+
+    <nav class='header__navigation'>
+      <div class='header__navigation-mobile-opener'>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class='header__navigation-links'>
+        <a href='/' class='header__navigation-link'>
+          Home
+        </a>
+        <a href='/about' class='header__navigation-link'>
+          About
+        </a>
+        <div class='header__navigation-dropdown'>
+          <button
+            class='header__navigation-link header__navigation-dropdown-btn'
+          >
+            <span>
+              Pages
+            </span>
+            <img
+              src='/icons/arrow_down.svg'
+              alt='arrow down'
+              class='header__navigation-dropdown-btn-icon'
+            />
+          </button>
+          <div class='header__navigation-dropdown-content'>
+            <a href='/service' class='header__navigation-link'>
+              Service
+            </a>
+            <a href='/team' class='header__navigation-link'>
+              Team
+            </a>
+            <a href='/contact' class='header__navigation-link'>
+              Contact Us
+            </a>
+          </div>
+        </div>
+        <a href='/shop' class='header__navigation-link'>
+          Shop
+        </a>
+        <a href='/projects' class='header__navigation-link'>
+          Projects
+        </a>
+        <a href='/blog' class='header__navigation-link'>
+          News
+        </a>
+      </div>
+    </nav>
+
+    <div class='header__search-and-cart'>
+      <a href='/' class='header__mobile-logo'>
+        <img
+          src='/icons/logo.svg'
+          alt='logo image'
+          class='header__mobile-logo-img'
+        />
+      </a>
+
+      <form action='/search' method='post' class='header__search'>
+        <input type='text' name='keywords' class='header__search-input' />
+        <button class='header__search-btn'>
+          <img
+            src='/icons/search.svg'
+            alt='search'
+            class='header__search-btn-icon'
+          />
+        </button>
+      </form>
+
+      <a href='/cart' class='header__cart'>
+        <div class='header__cart-round'>
+          <img src='/icons/cart.svg' alt='cart' class='header__cart-icon' />
+        </div>
+        <span class='header__cart-text'>
+          Cart (${{cartPrice}})
+        </span>
+      </a>
+    </div>
+  </div>
+</header>

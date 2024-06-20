@@ -1,0 +1,49 @@
+<section class='promo'>
+  <picture>
+    <source srcset='/img/portfolio/promo_bg.webp' type='image/webp' />
+    <img
+      src='/img/portfolio/promo_bg.jpg'
+      alt='promo background'
+      class='promo__bg'
+    />
+  </picture>
+  <h1 class='title title_big promo__title'>
+    Discover Our Farms
+  </h1>
+</section>
+<section class='tiles'>
+  <div class='container'>
+    <div class='tiles__wrapper'>
+      {{#each farms}}
+        <div class='tiles__tile'>
+          <div class='tiles__tile-link-container'>
+            <picture>
+              <img
+                src='{{promoImageNameMini}}'
+                alt='tile image'
+                class='tiles__tile-img'
+              />
+            </picture>
+            <div class='tiles__tile-square'>
+              <a href='/projects/{{_id}}' class='tiles__tile-link'>
+                <img
+                  src='icons/portfolio/arrow_right.svg'
+                  alt='arrow right'
+                  class='tiles__tile-link-icon'
+                />
+              </a>
+            </div>
+          </div>
+          <div class='title title_25px tiles__tile-title'>
+            {{name}}
+          </div>
+          <div class='tiles__tile-subtitle'>
+            {{type}}
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+{{> subscribe}}

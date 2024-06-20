@@ -1,0 +1,70 @@
+<section class='promo'>
+  <picture>
+    <source srcset='/img/blog/promo_bg.webp' type='image/webp' />
+    <img
+      src='/img/blog/promo_bg.jpg'
+      alt='promo background'
+      class='promo__bg'
+    />
+  </picture>
+  <h1 class='title title_big promo__title'>
+    Recent News
+  </h1>
+</section>
+<section class='news'>
+  <div class='container'>
+    <div class='news-container news__news-container'>
+      {{#each articles}}
+        <div class='new-item'>
+          <picture>
+            <img
+              src='{{promoImageNameMini}}'
+              alt='new background'
+              class='new-item__bg-img'
+            />
+          </picture>
+          <div class='new-item__date'>
+            <div class='new-item__date-day'>
+              {{day}}
+            </div>
+            <div class='new-item__date-month'>
+              {{month}}
+            </div>
+          </div>
+          <div class='new-item__content'>
+            <div class='new-item__author'>
+              <img
+                src='/icons/news_author.svg'
+                alt='author icon'
+                class='new-item__author-icon'
+              />
+              <span>
+                By {{author}}
+              </span>
+            </div>
+            <h3 class='title title_25px new-item__title'>
+              {{title}}
+            </h3>
+            <div class='new-item__text'>
+              {{description}}
+            </div>
+            <a href='/blog/{{_id}}' class='btn btn_yellow new-item__btn'>
+              <span>
+                Read More
+              </span>
+              <div class='btn__round'>
+                <img
+                  src='/icons/arrow_right.svg'
+                  alt='arrow right'
+                  class='btn__icon'
+                />
+              </div>
+            </a>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+{{> subscribe}}

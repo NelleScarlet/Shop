@@ -1,0 +1,155 @@
+<section class='promo'>
+  <picture>
+    <source srcset='/img/shop-single/promo_bg.webp' type='image/webp' />
+    <img
+      src='/img/shop-single/promo_bg.jpg'
+      alt='promo background'
+      class='promo__bg'
+    />
+  </picture>
+  <h1 class='title title_big promo__title'>
+    Great choice!
+  </h1>
+</section>
+<section class='description'>
+  {{#if productAdded}}
+    <div
+      class='title title_25px title_centered'
+      style='margin-bottom:70px;color:#7eb693'
+    >
+      The product is added to your cart! Thank you!
+    </div>
+  {{/if}}
+  <div class='description__wrapper'>
+    <div class='description__visual'>
+      <picture>
+        <img
+          src='{{product/imgName}}'
+          alt='product photo'
+          class='description__img'
+        />
+      </picture>
+      <div class='description__tag'>
+        {{product/category}}
+      </div>
+    </div>
+    <div class='description__overview'>
+      <h2 class='title title_40px description__title'>
+        {{product/title}}
+      </h2>
+      <div class='description__rating'>
+        {{#times product/rating}}
+          <img
+            src='/icons/star.svg'
+            alt='star'
+            class='description__rating-star'
+          />
+        {{/times}}
+      </div>
+      <div class='description__prices'>
+        <div class='description__prices-old'>
+          ${{product/oldPrice}}
+        </div>
+        <div class='description__prices-new'>
+          ${{product/price}}
+        </div>
+      </div>
+      <div class='description__text'>
+        {{product/promoInfo}}
+      </div>
+      <form method='post' class='description__form'>
+        <label for='quantity' class='description__form-label'>
+          Quantity :
+        </label>
+
+        <input
+          name='quantity'
+          type='number'
+          min='0'
+          value='0'
+          class='description__form-input'
+        />
+
+        <button class='btn description__form-btn'>
+          <span>
+            Add To Cart
+          </span>
+          <div class='btn__round'>
+            <img
+              src='/icons/arrow_right.svg'
+              alt='arrow right'
+              class='btn__icon'
+            />
+          </div>
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class='description__tab'>
+    <div class='description__tab-links'>
+      <button class='description__tab-link description__tab-link_active'>
+        Product Description
+      </button>
+
+      <button class='description__tab-link'>
+        Additional Info
+      </button>
+    </div>
+    <div class='description__tab-content'>
+      {{product/description}}
+    </div>
+    <div class='description__tab-content'>
+      {{product/additionalInfo}}
+    </div>
+  </div>
+</section>
+<section class='related-products'>
+  <div class='container'>
+    <div class='title title_centered related-products__title'>
+      Related Products
+    </div>
+    {{#if relatedProducts.length}}
+      <div class='products-container related-products__products'>
+        {{#each relatedProducts}}
+          <a href='/shop/{{_id}}' class='product'>
+            <div class='product__tag'>
+              {{category}}
+            </div>
+            <picture>
+              <img src='{{imgName}}' alt='product' class='product__img' />
+            </picture>
+            <div class='product__info'>
+              <div class='product__title'>
+                {{title}}
+              </div>
+              <div class='product__divider'></div>
+              <div class='product__footer'>
+                <div class='product__old-price'>
+                  ${{oldPrice}}
+                </div>
+                <div class='product__price'>
+                  ${{price}}
+                </div>
+                <div class='product__rating'>
+                  {{#times rating}}
+                    <img
+                      src='/icons/star.svg'
+                      alt='star'
+                      class='product__rating-star'
+                    />
+                  {{/times}}
+                </div>
+              </div>
+            </div>
+          </a>
+        {{/each}}
+      </div>
+    {{else}}
+      <h3 class='title title_25px title_centered'>
+        No related products!
+      </h3>
+    {{/if}}
+  </div>
+</section>
+
+{{> subscribe}}

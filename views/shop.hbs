@@ -1,0 +1,54 @@
+<section class='promo'>
+  <picture>
+    <source srcset='/img/shop/promo_bg.webp' type='image/webp' />
+    <img
+      src='/img/shop/promo_bg.jpg'
+      alt='promo background'
+      class='promo__bg'
+    />
+  </picture>
+  <h1 class='title title_big promo__title'>
+    Shop
+  </h1>
+</section>
+<section class='products'>
+  <div class='container'>
+    <div class='products-container products__items'>
+      {{#each products}}
+        <a href='/shop/{{_id}}' class='product'>
+          <div class='product__tag'>
+            {{category}}
+          </div>
+          <picture>
+            <img src='{{imgName}}' alt='product' class='product__img' />
+          </picture>
+          <div class='product__info'>
+            <div class='product__title'>
+              {{title}}
+            </div>
+            <div class='product__divider'></div>
+            <div class='product__footer'>
+              <div class='product__old-price'>
+                ${{oldPrice}}
+              </div>
+              <div class='product__price'>
+                ${{price}}
+              </div>
+              <div class='product__rating'>
+                {{#times rating}}
+                  <img
+                    src='/icons/star.svg'
+                    alt='star'
+                    class='product__rating-star'
+                  />
+                {{/times}}
+              </div>
+            </div>
+          </div>
+        </a>
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+{{> subscribe}}

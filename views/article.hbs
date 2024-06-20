@@ -1,0 +1,38 @@
+<section class='promo'>
+  <picture>
+    <img src='{{article/promoImageName}}' alt='background' class='promo__bg' />
+  </picture>
+  <div class='promo__wrapper'>
+    <div class='promo__credits'>
+      <div class='promo__credits-date'>
+        <span>
+          Posted On:
+        </span>
+        {{article/month}} {{article/day}}, {{article/year}}
+      </div>
+      <div class='promo__credits-author'>
+        <img
+          src='/icons/news_author_green.svg'
+          alt='author icon'
+          class='promo__credits-author-icon'
+        />
+        <div class='promo__credits-author-name'>
+          By {{article/author}}
+        </div>
+      </div>
+    </div>
+    <h1 class='title title_big promo__title'>
+      {{article/title}}
+    </h1>
+    <div class='promo__descr'>
+      {{article/description}}
+    </div>
+  </div>
+</section>
+<section class='content'>
+  <div class='content__container'>
+    {{{article/content}}}
+  </div>
+</section>
+
+{{> subscribe}}
